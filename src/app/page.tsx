@@ -12,6 +12,32 @@ import {
 } from '@/components/ui/card';
 import {Wand2} from 'lucide-react';
 import Link from 'next/link';
+import Script from 'next/script';
+
+const AdBanner = () => {
+  return (
+    <div className="flex justify-center my-4">
+      <div style={{ width: '320px', height: '50px' }}>
+        <Script id="ad-config" strategy="lazyOnload">
+          {`
+            atOptions = {
+              'key' : '21006a470e3b15a8634757d4771250dc',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          `}
+        </Script>
+        <Script
+          strategy="lazyOnload"
+          src="//www.highperformanceformat.com/21006a470e3b15a8634757d4771250dc/invoke.js"
+        />
+      </div>
+    </div>
+  );
+};
+
 
 const DragonIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -53,7 +79,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen w-full flex items-center justify-center bg-background p-4 font-body">
+    <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
+      <AdBanner />
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500">
         <CardHeader className="text-center">
           <CardTitle className="text-4xl font-bold font-headline tracking-tighter flex justify-center items-center gap-4">
@@ -86,6 +113,7 @@ export default function Home() {
           </div>
         </CardFooter>
       </Card>
+      <AdBanner />
     </main>
   );
 }
