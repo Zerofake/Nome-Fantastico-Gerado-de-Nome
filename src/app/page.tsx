@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import {Wand2} from 'lucide-react';
+import Link from 'next/link';
 
 const DragonIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -76,11 +77,13 @@ export default function Home() {
             )}
           </div>
         </CardContent>
-        <CardFooter className="justify-center">
-          <Button size="lg" onClick={generateRandomName}>
-            <Wand2 className="mr-2" />
-            Gerar Nome
-          </Button>
+        <CardFooter className="flex-col gap-4">
+          <div className="flex justify-center gap-4">
+            <Button size="lg" onClick={generateRandomName}>
+              <Wand2 className="mr-2" />
+              Gerar Nome
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </main>
