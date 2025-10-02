@@ -16,8 +16,9 @@ import Script from 'next/script';
 
 const AdBanner = () => {
   return (
-    <div className="flex justify-center my-4">
+    <div className="flex justify-center p-4">
       <div style={{ width: '320px', height: '50px' }}>
+        {/* Usamos uma chave única para garantir que o script seja recarregado em cada renderização, se necessário */}
         <Script id={`ad-config-${Math.random()}`} strategy="lazyOnload">
           {`
             atOptions = {
@@ -80,8 +81,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
-      <AdBanner />
-      <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500">
+      <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
+        <AdBanner />
         <CardHeader className="text-center">
           <CardTitle className="text-4xl font-bold font-headline tracking-tighter flex justify-center items-center gap-4">
              <DragonIcon className="w-12 h-12 text-primary" />
@@ -112,8 +113,8 @@ export default function Home() {
             </Button>
           </div>
         </CardFooter>
+        <AdBanner />
       </Card>
-      <AdBanner />
     </main>
   );
 }
