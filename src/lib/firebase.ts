@@ -7,7 +7,6 @@ import { initializeApp, getApp, getApps } from "firebase/app";
 const firebaseConfig = {
   "projectId": "studio-1838385078-59807",
   "appId": "1:303523227769:web:fe1d4b4554c7ea7d6acca8",
-  "storageBucket": "studio-1838385078-59807.firebasestorage.app",
   "apiKey": "AIzaSyDq-bQP0NzOQTXmdoCldf3LFpk4FaSZWMo",
   "authDomain": "studio-1838385078-59807.firebaseapp.com",
   "measurementId": "",
