@@ -44,7 +44,7 @@ export default function Home() {
     <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
         <a
-          href="https://s.click.aliexpress.com/e/_DkR3b5T"
+          href="https://s.click.aliexpress.com/e/_c3ekGfOJ"
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-background pt-6"
@@ -52,7 +52,7 @@ export default function Home() {
           <div className="mx-6 rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
             <div className="flex items-center gap-4">
               <Image
-                src="https://ae01.alicdn.com/kf/S057b936a066348f9864b4c466d7353b3Z.jpg_80x80.jpg"
+                src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_80x80.jpg"
                 alt="Anúncio AliExpress"
                 width={48}
                 height={48}
