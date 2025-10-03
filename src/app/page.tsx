@@ -295,6 +295,13 @@ export default function Home() {
         strategy="lazyOnload"
         src="//www.highperformanceformat.com/21006a470e3b15a8634757d4771250dc/invoke.js"
       />
+       <div id="container-945dd1cdd7f1d98b19c912562c162666" className="mt-4"></div>
+       <Script
+        id="revenue-cpm-gate"
+        async={true}
+        data-cfasync="false"
+        src="//pl27773529.revenuecpmgate.com/945dd1cdd7f1d98b19c912562c162666/invoke.js"
+      />
     </main>
   );
 }
