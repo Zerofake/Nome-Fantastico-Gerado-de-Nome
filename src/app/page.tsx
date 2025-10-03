@@ -72,6 +72,20 @@ const allAds = [
     title: 'Camisa',
     price: 'US$ 2.00',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4WJxmNp',
+    imgSrc: 'https://ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
+    imgAlt: '7 PCS Toy',
+    title: '7 PCS Toy',
+    price: 'R$ 15,00',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4WJxmNp',
+    imgSrc: 'https://ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
+    imgAlt: '7 PCS Toy',
+    title: '7 PCS Toy',
+    price: 'US$ 2.50',
+  },
 ];
 
 export default function Home() {
