@@ -28,7 +28,7 @@ const allAds = [
     imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress',
     title: 'Check out this New Offer',
-    price: 'US$ 7.35',
+    price: 'US$ 1.50',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
@@ -43,6 +43,20 @@ const allAds = [
     imgAlt: 'Anúncio AliExpress 2',
     title: 'Unmissable Super Offer',
     price: 'US$ 1.50',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3G3f183',
+    imgSrc: 'https://ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
+    imgAlt: 'Camisa',
+    title: 'Camisa',
+    price: 'R$ 19,99',
+  },
+    {
+    href: 'https://s.click.aliexpress.com/e/_c3G3f183',
+    imgSrc: 'https://ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
+    imgAlt: 'T-Shirt',
+    title: 'T-Shirt',
+    price: 'US$ 3.85',
   },
 ];
 
