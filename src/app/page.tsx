@@ -1,6 +1,7 @@
 'use client';
 
 import {useState, useEffect} from 'react';
+import Script from 'next/script';
 import {Button} from '@/components/ui/button';
 import {
   Card,
@@ -278,6 +279,22 @@ export default function Home() {
           </div>
         </CardFooter>
       </Card>
+      <Script id="ad-options" strategy="lazyOnload">
+        {`
+          atOptions = {
+            'key' : '21006a470e3b15a8634757d4771250dc',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        `}
+      </Script>
+      <Script
+        id="ad-script"
+        strategy="lazyOnload"
+        src="//www.highperformanceformat.com/21006a470e3b15a8634757d4771250dc/invoke.js"
+      />
     </main>
   );
 }
