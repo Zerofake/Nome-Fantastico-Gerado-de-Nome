@@ -86,26 +86,80 @@ const allAds = [
     title: '7 PCS Toy',
     price: 'US$ 2.50',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c44LfFKJ',
+    imgSrc: 'https://ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
+    imgAlt: 'TOY',
+    title: 'TOY',
+    price: 'R$ 12,00',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c44LfFKJ',
+    imgSrc: 'https://ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
+    imgAlt: 'TOY',
+    title: 'TOY',
+    price: 'US$ 2.00',
+  },
 ];
+
+const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
+  <a
+    href={ad.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full"
+  >
+    <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
+      <div className="flex items-center gap-4">
+        <Image
+          src={ad.imgSrc}
+          alt={ad.imgAlt}
+          width={140}
+          height={140}
+          className="rounded-md"
+        />
+        <div className="flex-grow">
+          <h4 className="font-semibold text-foreground">
+            {ad.title}
+          </h4>
+          <p className="text-sm text-muted-foreground">
+            Clique para ver mais detalhes...
+          </p>
+        </div>
+        <div className="text-right flex flex-col items-end">
+          <Badge
+            variant="outline"
+            className="mb-2 border-primary/50 text-primary"
+          >
+            AliExpress
+          </Badge>
+          <p className="text-2xl font-bold text-primary">
+            {ad.price}
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+);
 
 export default function Home() {
   const [name, setName] = useState<string>('');
   const [currentAd, setCurrentAd] = useState(allAds[0]);
+  const [currentAd2, setCurrentAd2] = useState(allAds[1]);
 
   useEffect(() => {
-    // Start cycling ads every 5 seconds
     const adInterval = setInterval(() => {
       setCurrentAd(allAds[Math.floor(Math.random() * allAds.length)]);
+      setCurrentAd2(allAds[Math.floor(Math.random() * allAds.length)]);
     }, 5000);
 
-    // Clean up the interval when the component unmounts
     return () => clearInterval(adInterval);
   }, []);
   
   const generateRandomName = () => {
     const vowels = 'aeiou';
     const consonants = 'bcdfghjklmnpqrstvwxyz';
-    const nameLength = Math.floor(Math.random() * 5) + 4; // Gera nomes de 4 a 8 letras
+    const nameLength = Math.floor(Math.random() * 5) + 4;
     let randomName = '';
     let isVowelTurn = Math.random() < 0.5;
 
@@ -123,51 +177,16 @@ export default function Home() {
     randomName = randomName.charAt(0).toUpperCase() + randomName.slice(1);
     setName(randomName);
 
-    // Change ad when a new name is generated
     setCurrentAd(allAds[Math.floor(Math.random() * allAds.length)]);
+    setCurrentAd2(allAds[Math.floor(Math.random() * allAds.length)]);
   };
 
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
-        <div className="p-6">
-          <a
-            href={currentAd.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full"
-          >
-            <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
-              <div className="flex items-center gap-4">
-                <Image
-                  src={currentAd.imgSrc}
-                  alt={currentAd.imgAlt}
-                  width={140}
-                  height={140}
-                  className="rounded-md"
-                />
-                <div className="flex-grow">
-                  <h4 className="font-semibold text-foreground">
-                    {currentAd.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    Clique para ver mais detalhes...
-                  </p>
-                </div>
-                <div className="text-right flex flex-col items-end">
-                   <Badge
-                    variant="outline"
-                    className="mb-2 border-primary/50 text-primary"
-                  >
-                    AliExpress
-                  </Badge>
-                  <p className="text-2xl font-bold text-primary">
-                    {currentAd.price}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
+        <div className="p-6 space-y-4">
+          <AdBanner ad={currentAd} />
+          <AdBanner ad={currentAd2} />
         </div>
         
         <CardHeader className="text-center pt-0">
