@@ -18,84 +18,84 @@ import { cn } from '@/lib/utils';
 const allAds = [
   {
     href: 'https://s.click.aliexpress.com/e/_c3ekGfOJ',
-    imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress',
     title: 'Confira esta Nova Oferta',
     price: 'R$ 7,35',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c3ekGfOJ',
-    imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress',
     title: 'Check out this New Offer',
     price: 'US$ 1.50',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
-    imgSrc: 'https://ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress 2',
     title: 'Super Oferta Imperdível',
     price: 'R$ 9,00',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
-    imgSrc: 'https://ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress 2',
     title: 'Unmissable Super Offer',
     price: 'US$ 1.50',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c3G3f183',
-    imgSrc: 'https://ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
     imgAlt: 'Camisa',
     title: 'Camisa',
     price: 'R$ 19,99',
   },
     {
     href: 'https://s.click.aliexpress.com/e/_c3G3f183',
-    imgSrc: 'https://ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S0f21f2b48ac34fbc9071372f2dffb46aK.jpg_140x140.jpg',
     imgAlt: 'T-Shirt',
     title: 'T-Shirt',
     price: 'US$ 3.85',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4F9jGT5',
-    imgSrc: 'https://ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
     imgAlt: 'Camisa',
     title: 'Camisa',
     price: 'R$ 10,00',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4F9jGT5',
-    imgSrc: 'https://ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
     imgAlt: 'Camisa',
     title: 'Camisa',
     price: 'US$ 2.00',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4WJxmNp',
-    imgSrc: 'https://ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
     imgAlt: '7 PCS Toy',
     title: '7 PCS Toy',
     price: 'R$ 15,00',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4WJxmNp',
-    imgSrc: 'https://ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/S5e4e70274e164bdab0798d7c331a8f9bw.jpg_140x140.jpg',
     imgAlt: '7 PCS Toy',
     title: '7 PCS Toy',
     price: 'US$ 2.50',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c44LfFKJ',
-    imgSrc: 'https://ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
     imgAlt: 'TOY',
     title: 'TOY',
     price: 'R$ 12,00',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c44LfFKJ',
-    imgSrc: 'https://ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
+    imgSrc: '//ae01.alicdn.com/kf/Sabcc009498e64ed7aabe4a15ee959575D.jpg_140x140.jpg',
     imgAlt: 'TOY',
     title: 'TOY',
     price: 'US$ 2.00',
@@ -112,7 +112,7 @@ const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
     <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
       <div className="flex items-center gap-4">
         <Image
-          src={ad.imgSrc}
+          src={`https:${ad.imgSrc}`}
           alt={ad.imgAlt}
           width={140}
           height={140}
@@ -195,6 +195,9 @@ export default function Home() {
           </CardDescription>
         </CardHeader>
         <CardContent>
+          <div className="w-full space-y-4 pb-4">
+             <AdBanner ad={currentAd} />
+          </div>
           <div className="flex items-center justify-center rounded-lg border-2 border-dashed bg-muted/50 p-8 min-h-[160px]">
             {name ? (
               <p className="text-4xl font-bold tracking-wider text-primary">
@@ -215,7 +218,6 @@ export default function Home() {
             </Button>
           </div>
            <div className="w-full space-y-4 pt-4">
-            <AdBanner ad={currentAd} />
             <AdBanner ad={currentAd2} />
           </div>
         </CardFooter>
