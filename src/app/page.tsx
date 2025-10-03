@@ -58,6 +58,20 @@ const allAds = [
     title: 'T-Shirt',
     price: 'US$ 3.85',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4F9jGT5',
+    imgSrc: 'https://ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
+    imgAlt: 'Camisa',
+    title: 'Camisa',
+    price: 'R$ 10,00',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4F9jGT5',
+    imgSrc: 'https://ae01.alicdn.com/kf/S39da97d24c7f4a5b9be2c155935f75a5p.jpg_140x140.jpg',
+    imgAlt: 'Camisa',
+    title: 'Camisa',
+    price: 'US$ 2.00',
+  },
 ];
 
 export default function Home() {
