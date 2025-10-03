@@ -4,8 +4,9 @@
   "description": "Gerador de nomes estranhos",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#FFFFFF",
   "theme_color": "#8B5CF6",
+  "version": "1.0.0.1",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -17,6 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "version": "1.0.0.1"
+  ]
 }
