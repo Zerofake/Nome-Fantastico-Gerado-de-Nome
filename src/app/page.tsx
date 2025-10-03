@@ -114,6 +114,20 @@ const allAds = [
     title: 'SSD 256 GB',
     price: 'US$ 8',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3mbVhu7',
+    imgSrc: '//ae01.alicdn.com/kf/Hf54837d546954dee89821b5be4a1fa0c9.jpg_140x140.jpg',
+    imgAlt: 'Mochila',
+    title: 'Mochila',
+    price: 'R$ 17',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3mbVhu7',
+    imgSrc: '//ae01.alicdn.com/kf/Hf54837d546954dee89821b5be4a1fa0c9.jpg_140x140.jpg',
+    imgAlt: 'Backpack',
+    title: 'Backpack',
+    price: 'US$ 3',
+  },
 ];
 
 const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
