@@ -53,10 +53,10 @@ export default function Home() {
             <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
               <div className="flex items-center gap-4">
                 <Image
-                  src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_240x240.jpg"
+                  src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg"
                   alt="Anúncio AliExpress"
-                  width={80}
-                  height={80}
+                  width={140}
+                  height={140}
                   className="rounded-md"
                 />
                 <div className="flex-grow">
