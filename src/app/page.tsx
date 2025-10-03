@@ -142,6 +142,20 @@ const allAds = [
     title: 'SAIA',
     price: 'US$ 8',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3YBgMwx',
+    imgSrc: '//ae01.alicdn.com/kf/S810a739123484adf9facc3c1b21bce8bV.jpg_140x140.jpg',
+    imgAlt: 'Camisa',
+    title: 'Camisa',
+    price: 'R$ 12',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3YBgMwx',
+    imgSrc: '//ae01.alicdn.com/kf/S810a739123484adf9facc3c1b21bce8bV.jpg_140x140.jpg',
+    imgAlt: 'Camisa',
+    title: 'Camisa',
+    price: 'US$ 3',
+  },
 ];
 
 const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
