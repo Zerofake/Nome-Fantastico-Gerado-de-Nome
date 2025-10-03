@@ -15,33 +15,49 @@ import Image from 'next/image';
 import {Badge} from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
-const ads = [
+const allAds = [
   {
     href: 'https://s.click.aliexpress.com/e/_c3ekGfOJ',
     imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress',
     title: 'Confira esta Nova Oferta',
-    priceBRL: 'R$ 7,35',
-    priceUSD: 'US$ 7.35',
+    price: 'R$ 7,35',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3ekGfOJ',
+    imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
+    imgAlt: 'Anúncio AliExpress',
+    title: 'Check out this New Offer',
+    price: 'US$ 7.35',
   },
   {
     href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
     imgSrc: 'https://ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
     imgAlt: 'Anúncio AliExpress 2',
     title: 'Super Oferta Imperdível',
-    priceBRL: 'R$ 9,00',
-    priceUSD: 'US$ 1,50',
+    price: 'R$ 9,00',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
+    imgSrc: 'https://ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
+    imgAlt: 'Anúncio AliExpress 2',
+    title: 'Unmissable Super Offer',
+    price: 'US$ 1.50',
   },
 ];
 
 export default function Home() {
   const [name, setName] = useState<string>('');
-  const [currency, setCurrency] = useState<'BRL' | 'USD'>('BRL');
-  const [currentAd, setCurrentAd] = useState(ads[0]);
+  const [currentAd, setCurrentAd] = useState(allAds[0]);
 
   useEffect(() => {
-    // Show a random ad on initial load
-    setCurrentAd(ads[Math.floor(Math.random() * ads.length)]);
+    // Start cycling ads every 5 seconds
+    const adInterval = setInterval(() => {
+      setCurrentAd(allAds[Math.floor(Math.random() * allAds.length)]);
+    }, 5000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(adInterval);
   }, []);
   
   const generateRandomName = () => {
@@ -66,7 +82,7 @@ export default function Home() {
     setName(randomName);
 
     // Change ad when a new name is generated
-    setCurrentAd(ads[Math.floor(Math.random() * ads.length)]);
+    setCurrentAd(allAds[Math.floor(Math.random() * allAds.length)]);
   };
 
   return (
@@ -95,10 +111,6 @@ export default function Home() {
                   <p className="text-sm text-muted-foreground">
                     Clique para ver mais detalhes...
                   </p>
-                  <div className="mt-4 flex items-center gap-2">
-                    <Button size="sm" variant={currency === 'BRL' ? 'default' : 'outline'} onClick={(e) => { e.preventDefault(); setCurrency('BRL')}}>R$</Button>
-                    <Button size="sm" variant={currency === 'USD' ? 'default' : 'outline'} onClick={(e) => { e.preventDefault(); setCurrency('USD')}}>US$</Button>
-                  </div>
                 </div>
                 <div className="text-right flex flex-col items-end">
                    <Badge
@@ -108,7 +120,7 @@ export default function Home() {
                     AliExpress
                   </Badge>
                   <p className="text-2xl font-bold text-primary">
-                    {currency === 'BRL' ? currentAd.priceBRL : currentAd.priceUSD}
+                    {currentAd.price}
                   </p>
                 </div>
               </div>
