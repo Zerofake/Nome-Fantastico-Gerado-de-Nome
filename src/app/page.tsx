@@ -128,6 +128,20 @@ const allAds = [
     title: 'Backpack',
     price: 'US$ 3',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3CWnn6J',
+    imgSrc: '//ae01.alicdn.com/kf/Scfeddfb9500d4e15b397bd586bbc89226.jpg_140x140.jpg',
+    imgAlt: 'SAIA',
+    title: 'SAIA',
+    price: 'R$ 30',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3CWnn6J',
+    imgSrc: '//ae01.alicdn.com/kf/Scfeddfb9500d4e15b397bd586bbc89226.jpg_140x140.jpg',
+    imgAlt: 'SAIA',
+    title: 'SAIA',
+    price: 'US$ 8',
+  },
 ];
 
 const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
