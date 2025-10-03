@@ -1,12 +1,12 @@
 {
-  "version": "1.0.0.1",
   "name": "Nome Fantástico",
   "short_name": "Nome Fantástico",
   "description": "Gerador de nomes estranhos",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#8B5CF6",
+  "background_color": "#E6E6FA",
+  "theme_color": "#A020F0",
+  "version": "1.0.0.1",
   "icons": [
     {
       "src": "/icons/icon192.png",
@@ -18,5 +18,10 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "play": {
+    "ads": {
+      "is_using_ad_id": true
+    }
+  }
 }
