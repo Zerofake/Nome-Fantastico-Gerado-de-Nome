@@ -100,6 +100,20 @@ const allAds = [
     title: 'TOY',
     price: 'US$ 2.00',
   },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3tuqnSR',
+    imgSrc: '//ae01.alicdn.com/kf/Scb2387ab34dc4fe8a7fe7012f463c577j.jpg_140x140.jpg',
+    imgAlt: 'SSD 256 GB',
+    title: 'SSD 256 GB',
+    price: 'R$ 58',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3tuqnSR',
+    imgSrc: '//ae01.alicdn.com/kf/Scb2387ab34dc4fe8a7fe7012f463c577j.jpg_140x140.jpg',
+    imgAlt: 'SSD 256 GB',
+    title: 'SSD 256 GB',
+    price: 'US$ 8',
+  },
 ];
 
 const AdBanner = ({ ad }: { ad: typeof allAds[0] }) => (
