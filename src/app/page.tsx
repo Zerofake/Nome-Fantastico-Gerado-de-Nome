@@ -43,6 +43,42 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
+        <a
+          href="https://s.click.aliexpress.com/e/_DkR3b5T"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-background pt-6"
+        >
+          <div className="mx-6 rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
+            <div className="flex items-center gap-4">
+              <Image
+                src="https://ae01.alicdn.com/kf/S057b936a066348f9864b4c466d7353b3Z.jpg_80x80.jpg"
+                alt="Anúncio AliExpress"
+                width={48}
+                height={48}
+                className="rounded-md"
+              />
+              <div className="flex-grow">
+                <h4 className="font-semibold text-foreground">
+                  Confira esta Nova Oferta
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Clique para ver mais detalhes...
+                </p>
+              </div>
+              <div className="text-right">
+                <Badge
+                  variant="outline"
+                  className="mb-1 border-primary/50 text-primary"
+                >
+                  AliExpress
+                </Badge>
+                <p className="text-lg font-bold text-primary">US $7.35</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
         <CardHeader className="text-center">
           <CardTitle className="text-4xl font-bold font-headline tracking-tighter flex justify-center items-center gap-4">
             <Wand2 className="w-12 h-12 text-primary" />
@@ -73,42 +109,6 @@ export default function Home() {
             </Button>
           </div>
         </CardFooter>
-
-        <a
-          href="https://s.click.aliexpress.com/e/_DkR3b5T"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 block w-full bg-background"
-        >
-          <div className="mx-6 mb-6 rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
-            <div className="flex items-center gap-4">
-              <Image
-                src="https://ae01.alicdn.com/kf/S057b936a066348f9864b4c466d7353b3Z.jpg_80x80.jpg"
-                alt="Anúncio AliExpress"
-                width={48}
-                height={48}
-                className="rounded-md"
-              />
-              <div className="flex-grow">
-                <h4 className="font-semibold text-foreground">
-                  Confira esta Nova Oferta
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Clique para ver mais detalhes...
-                </p>
-              </div>
-              <div className="text-right">
-                <Badge
-                  variant="outline"
-                  className="mb-1 border-primary/50 text-primary"
-                >
-                  AliExpress
-                </Badge>
-                <p className="text-lg font-bold text-primary">US $7.35</p>
-              </div>
-            </div>
-          </div>
-        </a>
       </Card>
     </main>
   );
