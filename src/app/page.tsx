@@ -92,8 +92,8 @@ export default function Home() {
                   <Image
                     src={currentAd.imgSrc}
                     alt={currentAd.alt}
-                    width={150}
-                    height={150}
+                    width={240}
+                    height={240}
                     className="transform transition-transform duration-300 group-hover:scale-110"
                     data-ai-hint={currentAd['data-ai-hint']}
                   />
