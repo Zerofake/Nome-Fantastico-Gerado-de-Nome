@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Button} from '@/components/ui/button';
 import {
   Card,
@@ -13,10 +13,37 @@ import {
 import {Wand2} from 'lucide-react';
 import Image from 'next/image';
 import {Badge} from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+
+const ads = [
+  {
+    href: 'https://s.click.aliexpress.com/e/_c3ekGfOJ',
+    imgSrc: 'https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg',
+    imgAlt: 'Anúncio AliExpress',
+    title: 'Confira esta Nova Oferta',
+    priceBRL: 'R$ 7,35',
+    priceUSD: 'US$ 7.35',
+  },
+  {
+    href: 'https://s.click.aliexpress.com/e/_c4SyE9dz',
+    imgSrc: 'https://ae01.alicdn.com/kf/S4a39da6e574c47d8a6299583be7b12265.jpg_140x140.jpg',
+    imgAlt: 'Anúncio AliExpress 2',
+    title: 'Super Oferta Imperdível',
+    priceBRL: 'R$ 9,00',
+    priceUSD: 'US$ 1,50',
+  },
+];
 
 export default function Home() {
   const [name, setName] = useState<string>('');
+  const [currency, setCurrency] = useState<'BRL' | 'USD'>('BRL');
+  const [currentAd, setCurrentAd] = useState(ads[0]);
 
+  useEffect(() => {
+    // Show a random ad on initial load
+    setCurrentAd(ads[Math.floor(Math.random() * ads.length)]);
+  }, []);
+  
   const generateRandomName = () => {
     const vowels = 'aeiou';
     const consonants = 'bcdfghjklmnpqrstvwxyz';
@@ -36,8 +63,10 @@ export default function Home() {
     }
 
     randomName = randomName.charAt(0).toUpperCase() + randomName.slice(1);
-
     setName(randomName);
+
+    // Change ad when a new name is generated
+    setCurrentAd(ads[Math.floor(Math.random() * ads.length)]);
   };
 
   return (
@@ -45,7 +74,7 @@ export default function Home() {
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
         <div className="p-6">
           <a
-            href="https://s.click.aliexpress.com/e/_c3ekGfOJ"
+            href={currentAd.href}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full"
@@ -53,34 +82,40 @@ export default function Home() {
             <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
               <div className="flex items-center gap-4">
                 <Image
-                  src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_140x140.jpg"
-                  alt="Anúncio AliExpress"
+                  src={currentAd.imgSrc}
+                  alt={currentAd.imgAlt}
                   width={140}
                   height={140}
                   className="rounded-md"
                 />
                 <div className="flex-grow">
                   <h4 className="font-semibold text-foreground">
-                    Confira esta Nova Oferta
+                    {currentAd.title}
                   </h4>
                   <p className="text-sm text-muted-foreground">
                     Clique para ver mais detalhes...
                   </p>
+                  <div className="mt-4 flex items-center gap-2">
+                    <Button size="sm" variant={currency === 'BRL' ? 'default' : 'outline'} onClick={(e) => { e.preventDefault(); setCurrency('BRL')}}>R$</Button>
+                    <Button size="sm" variant={currency === 'USD' ? 'default' : 'outline'} onClick={(e) => { e.preventDefault(); setCurrency('USD')}}>US$</Button>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <Badge
+                <div className="text-right flex flex-col items-end">
+                   <Badge
                     variant="outline"
-                    className="mb-1 border-primary/50 text-primary"
+                    className="mb-2 border-primary/50 text-primary"
                   >
                     AliExpress
                   </Badge>
-                  <p className="text-lg font-bold text-primary">US $7.35</p>
+                  <p className="text-2xl font-bold text-primary">
+                    {currency === 'BRL' ? currentAd.priceBRL : currentAd.priceUSD}
+                  </p>
                 </div>
               </div>
             </div>
           </a>
         </div>
-
+        
         <CardHeader className="text-center pt-0">
           <CardTitle className="text-4xl font-bold font-headline tracking-tighter flex justify-center items-center gap-4">
             <Wand2 className="w-12 h-12 text-primary" />
