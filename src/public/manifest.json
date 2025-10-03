@@ -1,12 +1,18 @@
 {
   "name": "Nome Fantástico",
   "short_name": "Nome Fantástico",
-  "description": "Gerador de nomes estranhos",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#8B5CF6",
-  "version": "1.0.0.1",
+  "description": "Gerador de nomes estranhos.",
+  "version": "1.0.0.2",
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.google.android.gms.permission.AD_ID"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/icon192.png",
@@ -17,12 +23,6 @@
       "src": "/icons/icon512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.google.android.gms.permission.AD_ID"
     }
   ]
 }
