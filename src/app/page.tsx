@@ -43,43 +43,45 @@ export default function Home() {
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center bg-background p-4 font-body">
       <Card className="w-full max-w-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-500 overflow-hidden">
-        <a
-          href="https://s.click.aliexpress.com/e/_c3ekGfOJ"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full bg-background pt-6"
-        >
-          <div className="mx-6 rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
-            <div className="flex items-center gap-4">
-              <Image
-                src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_80x80.jpg"
-                alt="Anúncio AliExpress"
-                width={48}
-                height={48}
-                className="rounded-md"
-              />
-              <div className="flex-grow">
-                <h4 className="font-semibold text-foreground">
-                  Confira esta Nova Oferta
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  Clique para ver mais detalhes...
-                </p>
-              </div>
-              <div className="text-right">
-                <Badge
-                  variant="outline"
-                  className="mb-1 border-primary/50 text-primary"
-                >
-                  AliExpress
-                </Badge>
-                <p className="text-lg font-bold text-primary">US $7.35</p>
+        <div className="p-6">
+          <a
+            href="https://s.click.aliexpress.com/e/_c3ekGfOJ"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <div className="rounded-lg border bg-card/50 p-4 transition-colors hover:bg-card">
+              <div className="flex items-center gap-4">
+                <Image
+                  src="https://ae01.alicdn.com/kf/Sf8eb8217199e41b8a6c261029ea20d98P.jpg_240x240.jpg"
+                  alt="Anúncio AliExpress"
+                  width={80}
+                  height={80}
+                  className="rounded-md"
+                />
+                <div className="flex-grow">
+                  <h4 className="font-semibold text-foreground">
+                    Confira esta Nova Oferta
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Clique para ver mais detalhes...
+                  </p>
+                </div>
+                <div className="text-right">
+                  <Badge
+                    variant="outline"
+                    className="mb-1 border-primary/50 text-primary"
+                  >
+                    AliExpress
+                  </Badge>
+                  <p className="text-lg font-bold text-primary">US $7.35</p>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
-        <CardHeader className="text-center">
+        <CardHeader className="text-center pt-0">
           <CardTitle className="text-4xl font-bold font-headline tracking-tighter flex justify-center items-center gap-4">
             <Wand2 className="w-12 h-12 text-primary" />
             Nome Fantástico
